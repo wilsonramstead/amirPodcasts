@@ -180,7 +180,7 @@ jQuery(document).ready(function($) {
 	        1200:{
 	        	margin: 20,
 	        	stagePadding: 0,
-	          items: 3
+	          items: 2
 	        }
 		    }
 			});

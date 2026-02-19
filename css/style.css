@@ -590,6 +590,15 @@ a {
       .podcast-entry .text {
         width: calc(100% - 520px); } }
 
+.nonloop-block-13 .owl-item img.rounded-circle {
+  width: 150px !important;
+  height: 150px !important;
+  object-fit: cover;
+  object-position: center top;
+  border-radius: 50% !important;
+  display: block;
+  margin: 0 auto; }
+
 .mejs__container {
   width: 100% !important; }
 

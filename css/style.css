@@ -1004,3 +1004,331 @@ a.podcast-entry {
     background: #f23a2e;
     color: #fff;
     border: 1px solid transparent; }
+
+/* =============================================
+   DARK CINEMATIC THEME
+   ============================================= */
+
+body {
+  background: #08080f;
+  color: #c8c8d0; }
+
+/* Smoke background container */
+.smoke-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none; }
+
+.site-wrap {
+  position: relative;
+  z-index: 1; }
+
+/* Individual smoke orbs - CRANKED UP */
+.smoke-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  will-change: transform, opacity; }
+
+/* Orb 1 - HUGE warm red, top-left */
+.smoke-orb-1 {
+  width: 900px;
+  height: 900px;
+  background: radial-gradient(circle, rgba(242, 58, 46, 0.9) 0%, rgba(200, 40, 50, 0.5) 30%, rgba(150, 20, 40, 0.2) 60%, transparent 75%);
+  top: -15%;
+  left: -10%;
+  animation: smoke1 18s ease-in-out infinite; }
+
+/* Orb 2 - HUGE deep purple, right side */
+.smoke-orb-2 {
+  width: 800px;
+  height: 800px;
+  background: radial-gradient(circle, rgba(140, 30, 180, 0.85) 0%, rgba(100, 20, 140, 0.4) 30%, rgba(60, 10, 80, 0.15) 60%, transparent 75%);
+  top: 10%;
+  right: -15%;
+  animation: smoke2 22s ease-in-out infinite 2s; }
+
+/* Orb 3 - MASSIVE amber/orange, center */
+.smoke-orb-3 {
+  width: 1000px;
+  height: 1000px;
+  background: radial-gradient(circle, rgba(220, 100, 30, 0.7) 0%, rgba(200, 60, 20, 0.35) 30%, rgba(150, 40, 20, 0.1) 60%, transparent 75%);
+  top: 35%;
+  left: 5%;
+  animation: smoke3 25s ease-in-out infinite 4s; }
+
+/* Orb 4 - Crimson blaze, bottom-right */
+.smoke-orb-4 {
+  width: 850px;
+  height: 850px;
+  background: radial-gradient(circle, rgba(220, 20, 60, 0.8) 0%, rgba(180, 20, 50, 0.4) 30%, rgba(120, 10, 40, 0.15) 60%, transparent 75%);
+  bottom: -5%;
+  right: -5%;
+  animation: smoke4 20s ease-in-out infinite 1s; }
+
+/* Orb 5 - Electric blue-purple, wanderer */
+.smoke-orb-5 {
+  width: 750px;
+  height: 750px;
+  background: radial-gradient(circle, rgba(80, 50, 200, 0.75) 0%, rgba(60, 30, 160, 0.35) 30%, rgba(40, 20, 100, 0.1) 60%, transparent 75%);
+  top: 55%;
+  left: 40%;
+  animation: smoke5 28s ease-in-out infinite 6s; }
+
+/* Smoke animations - BIG movement, HIGH opacity */
+@keyframes smoke1 {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.8; }
+  25% {
+    transform: translate(120px, 100px) scale(1.3);
+    opacity: 1; }
+  50% {
+    transform: translate(50px, 200px) scale(0.9);
+    opacity: 0.7; }
+  75% {
+    transform: translate(-60px, 130px) scale(1.15);
+    opacity: 0.9; }
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.8; } }
+
+@keyframes smoke2 {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.7; }
+  30% {
+    transform: translate(-160px, 80px) scale(1.4);
+    opacity: 1; }
+  60% {
+    transform: translate(-100px, -120px) scale(0.85);
+    opacity: 0.6; }
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.7; } }
+
+@keyframes smoke3 {
+  0% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+    opacity: 0.6; }
+  20% {
+    transform: translate(100px, -80px) scale(1.2) rotate(5deg);
+    opacity: 0.9; }
+  45% {
+    transform: translate(180px, 50px) scale(0.85) rotate(-3deg);
+    opacity: 1; }
+  70% {
+    transform: translate(-50px, 120px) scale(1.15) rotate(2deg);
+    opacity: 0.7; }
+  100% {
+    transform: translate(0, 0) scale(1) rotate(0deg);
+    opacity: 0.6; } }
+
+@keyframes smoke4 {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.7; }
+  35% {
+    transform: translate(-120px, -160px) scale(1.3);
+    opacity: 1; }
+  65% {
+    transform: translate(80px, -100px) scale(0.9);
+    opacity: 0.6; }
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.7; } }
+
+@keyframes smoke5 {
+  0% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.5; }
+  25% {
+    transform: translate(-130px, 100px) scale(1.4);
+    opacity: 0.9; }
+  50% {
+    transform: translate(60px, 160px) scale(0.85);
+    opacity: 0.7; }
+  75% {
+    transform: translate(140px, -50px) scale(1.2);
+    opacity: 1; }
+  100% {
+    transform: translate(0, 0) scale(1);
+    opacity: 0.5; } }
+
+/* Mobile: slightly smaller orbs */
+@media (max-width: 767.98px) {
+  .smoke-orb-1 { width: 500px; height: 500px; }
+  .smoke-orb-2 { width: 450px; height: 450px; }
+  .smoke-orb-3 { width: 550px; height: 550px; }
+  .smoke-orb-4 { width: 480px; height: 480px; }
+  .smoke-orb-5 { width: 400px; height: 400px; } }
+
+/* Subtle grain texture overlay */
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px; }
+
+/* Make ALL sections transparent so smoke shows through */
+.bg-light {
+  background: transparent !important; }
+
+.site-section {
+  background: transparent; }
+
+.site-wrap {
+  background: transparent; }
+
+/* Section headings */
+.site-section-heading,
+.font-weight-bold.text-black,
+.text-black,
+h2.text-black,
+h3.text-black {
+  color: #fff !important; }
+
+/* About section text */
+.site-section p {
+  color: #b0b0bb; }
+
+/* Glassmorphism podcast entry cards */
+.podcast-entry.bg-white,
+a.podcast-entry.bg-white {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  border-radius: 12px;
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05); }
+
+a.podcast-entry:hover,
+a.podcast-entry:focus {
+  background: rgba(255, 255, 255, 0.08) !important;
+  border-color: rgba(242, 58, 46, 0.3);
+  box-shadow:
+    0 12px 50px rgba(242, 58, 46, 0.12),
+    0 8px 32px rgba(0, 0, 0, 0.4),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  transform: translateY(-3px); }
+
+.podcast-entry .text h3 {
+  color: #f0f0f0; }
+
+.podcast-entry .text p {
+  color: #9a9aa6; }
+
+.podcast-entry .sep {
+  color: #555; }
+
+.text-black-opacity-05 {
+  color: rgba(255, 255, 255, 0.4) !important; }
+
+/* Equal height owl carousel items */
+.nonloop-block-13 .owl-stage {
+  display: flex; }
+
+.nonloop-block-13 .owl-item {
+  display: flex; }
+
+/* Glassmorphism Featured Guests carousel cards */
+.nonloop-block-13 .bg-white {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+  border-radius: 12px;
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  width: 100%;
+  height: 100%; }
+
+.nonloop-block-13 .bg-white h3 {
+  color: #f0f0f0; }
+
+.nonloop-block-13 .bg-white p {
+  color: #9a9aa6; }
+
+/* Behind The Mic section */
+.team-member .text {
+  color: #fff; }
+
+/* About the Podcast section */
+.site-section .font-weight-bold.text-black.mb-4 {
+  color: #fff !important; }
+
+/* Carousel nav arrows */
+.block-13 .owl-nav .owl-prev,
+.block-13 .owl-nav .owl-next,
+.slide-one-item .owl-nav .owl-prev,
+.slide-one-item .owl-nav .owl-next {
+  color: rgba(255, 255, 255, 0.7); }
+  .block-13 .owl-nav .owl-prev:hover,
+  .block-13 .owl-nav .owl-next:hover {
+    color: #f23a2e; }
+
+/* Section divider - glowing line */
+.site-section + .site-section {
+  border-top: 1px solid rgba(255, 255, 255, 0.04); }
+
+.site-section + .bg-light.block-13 {
+  border-top: 1px solid rgba(242, 58, 46, 0.08); }
+
+/* Glowing section headings */
+.site-section h2.font-weight-bold {
+  text-shadow: 0 0 40px rgba(242, 58, 46, 0.15); }
+
+/* Single post page */
+.site-section h3.font-weight-bold {
+  color: #fff; }
+
+.site-section #episode-description p,
+.site-section #episode-description li {
+  color: #b0b0bb; }
+
+/* Button style - glowing red */
+.btn.btn-primary {
+  background: linear-gradient(135deg, #f23a2e, #c0281e);
+  border: none;
+  box-shadow:
+    0 4px 20px rgba(242, 58, 46, 0.4),
+    0 0 60px rgba(242, 58, 46, 0.1); }
+
+.btn.btn-primary:hover {
+  background: linear-gradient(135deg, #ff4a3e, #d42e24);
+  border: none;
+  box-shadow:
+    0 6px 30px rgba(242, 58, 46, 0.5),
+    0 0 80px rgba(242, 58, 46, 0.15); }
+
+/* Glowing image borders for podcast thumbnails */
+.podcast-entry .image {
+  border-radius: 12px 0 0 12px; }
+  @media (max-width: 767.98px) {
+    .podcast-entry .image {
+      border-radius: 12px 12px 0 0; } }
+
+/* Video container glow on single post */
+#video-container {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5); }
+
+#video-container img {
+  border-radius: 12px; }

@@ -1,9 +1,14 @@
 /* Base */
+html {
+  overflow-x: hidden; }
+
 body {
   line-height: 1.7;
   color: #4d4d4d;
   font-weight: 200;
-  font-size: 1.1rem; }
+  font-size: 1.1rem;
+  overflow-x: hidden;
+  width: 100%; }
 
 ::-moz-selection {
   background: #000;
